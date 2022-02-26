@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class JavaApplication1 {
+   static Scanner in = new Scanner(System.in);
+    public static void main(String[] args) {
+        int n = in.nextInt();
+        int k = in.nextInt();
+        int ans = 0;
+        int count =0;
+        for(int i=0 ; i<n ; i++){
+            int l = in.nextInt();
+            int m = in.nextInt();
+            if(l==m){
+                count +=1;
+            }
+            else{
+
+                count = count +((Math.max(l, m))-(Math.min(l,m)))+1;
+            }
+            }
+        while(count % k != 0){
+            count++;
+            ans++;
+        }
+        System.out.print(ans);
+        }
+        }
